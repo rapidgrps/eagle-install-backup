@@ -10,7 +10,7 @@ master is specifically build for testing & development
 
 
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/10.0/eagle_install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/7.0/eagle7_install.sh
 
 sudo chmod +x eagle_install.sh
 
