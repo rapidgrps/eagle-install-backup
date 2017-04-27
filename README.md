@@ -6,5 +6,7 @@ This script can be safely used in a multi-odoo code base server because the defa
 1. Download the script:
 ```
 sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/9.0/eagle9_install.sh
+```
 sudo chmod +x eagle9_install.sh
+```
 sudo ./eagle9_install.sh
