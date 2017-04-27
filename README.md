@@ -5,13 +5,6 @@ This script can be safely used in a multi-odoo code base server because the defa
 <h3>Installation procedure</h3>
 1. Download the script:
 ```
-sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/9.0/odoo_install.sh
-```
-2. Make the script executable:
-```
-sudo chmod +x odoo_install.sh
-```
-3. Execute the script:
-```
-sudo ./odoo_install.sh
-```
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/9.0/eagle9_install.sh
+sudo chmod +x eagle9_install.sh
+sudo ./eagle9_install.sh
