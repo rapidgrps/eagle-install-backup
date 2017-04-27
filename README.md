@@ -7,3 +7,12 @@ By chosing the version at the top in Github you can choose to use the script acc
 8.0 is specifically build for Odoo V8 installations
 9.0 is specifically build for Odoo V9 installations
 master is specifically build for testing & development
+
+
+
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/10.0/eagle_install.sh
+
+sudo chmod +x eagle_install.sh
+
+sudo ./eagle_install.sh
+
