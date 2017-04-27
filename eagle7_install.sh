@@ -106,7 +106,7 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 # Install EAGLE
 #--------------------------------------------------
 echo -e "\n==== Installing EAGLE Server ===="
-sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/eagle-backup $OE_HOME_EXT/
+sudo git clone --depth 1 --branch 7.0 $OE_VERSION https://github.com/ShaheenHossain/eagle-backup $OE_HOME_EXT/
 
 if [ $IS_ENTERPRISE = "True" ]; then
     # Odoo Enterprise install!
