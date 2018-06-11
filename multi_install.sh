@@ -337,17 +337,17 @@ WantedBy=multi-user.target
 sudo nano /lib/systemd/system/eagle76.service
 
 [Unit]
-Description=Eagle 75
+Description=Eagle 76
 Requires=postgresql.service
 After=postgresql.service
 
 [Service]
 Type=simple
 PermissionsStartOnly=true
-User=eagle75
-Group=eagle75
-SyslogIdentifier=eagle75
-ExecStart=/opt/eagle75/venv/bin/python2 /opt/eagle75/odoo-bin -c /etc/eagle75.conf
+User=eagle76
+Group=eagle76
+SyslogIdentifier=eagle76
+ExecStart=/opt/eagle76/venv/bin/python2 /opt/eagle76/odoo-bin -c /etc/eagle76.conf
 
 [Install]
 WantedBy=multi-user.target
