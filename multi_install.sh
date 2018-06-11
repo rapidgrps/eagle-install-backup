@@ -1,65 +1,126 @@
 sudo apt-get update && apt-get -y upgrade
-sudo apt-get install git wkhtmltopdf python-pip python-dev \
-    python-virtualenv libevent-dev gcc libjpeg-dev libxml2-dev \
+---------------------------------------
+sudo apt-get install git wkhtmltopdf python-pip python-dev \ python-virtualenv libevent-dev gcc libjpeg-dev libxml2-dev \
     libssl-dev libsasl2-dev node-less libldap2-dev libxslt-dev
+---------------------------------------
 apt install postgresql-9.5 postgresql-server-dev-9.5
+---------------------------------------
 systemctl enable postgresql.service
+---------------------------------------
 systemctl start postgresql.service
+
+---------------------------------------
+
 sudo adduser --system --group eagle70 --home /opt/eagle70
 sudo adduser --system --group eagle71 --home /opt/eagle71
 sudo adduser --system --group eagle72 --home /opt/eagle72
 sudo adduser --system --group eagle73 --home /opt/eagle73
+sudo adduser --system --group eagle74 --home /opt/eagle74
+sudo adduser --system --group eagle75 --home /opt/eagle75
+sudo adduser --system --group eagle76 --home /opt/eagle76
 
+---------------------------------------
 su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password eagle70"
 su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password eagle71"
 su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password eagle72"
 su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password eagle73"
+su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password eagle74"
+su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password eagle75"
+su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password eagle76"
+---------------------------------------
+
+
 
 sudo su - eagle70 -s /bin/bash
 # git clone https://www.github.com/odoo/odoo --depth 1 --branch 10.0 --single-branch /opt/odoo10
 git clone https://github.com/ShaheenHossain/eagle-backup --depth 1 --branch 10.0 --single-branch /opt/eagle70
+---------------------------------------
 cd /opt/eagle70
 virtualenv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
-
+---------------------------------------
 exit
 
 sudo su - eagle71 -s /bin/bash
 
 git clone https://github.com/ShaheenHossain/eagle-backup --depth 1 --branch 10.0 --single-branch /opt/eagle71
-
+---------------------------------------
 cd /opt/eagle71
 virtualenv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
-
+---------------------------------------
 exit
 
 
 sudo su - eagle72 -s /bin/bash
 
 git clone https://github.com/ShaheenHossain/eagle-backup --depth 1 --branch 10.0 --single-branch /opt/eagle72
-
+---------------------------------------
 cd /opt/eagle72
 virtualenv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
-
+---------------------------------------
 exit
 
 
 sudo su - eagle73 -s /bin/bash
 
 git clone https://github.com/ShaheenHossain/eagle-backup --depth 1 --branch 10.0 --single-branch /opt/eagle73
-
+---------------------------------------
 cd /opt/eagle73
 virtualenv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
+---------------------------------------
+exit
+
+sudo su - eagle74 -s /bin/bash
+
+git clone https://github.com/ShaheenHossain/eagle-backup --depth 1 --branch 10.0 --single-branch /opt/eagle74
+---------------------------------------
+cd /opt/eagle74
+virtualenv ./venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+---------------------------------------
+exit
+
+
+sudo su - eagle75 -s /bin/bash
+
+git clone https://github.com/ShaheenHossain/eagle-backup --depth 1 --branch 10.0 --single-branch /opt/eagle75
+
+---------------------------------------
+cd /opt/eagle75
+virtualenv ./venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+---------------------------------------
+exit
+
+---------------------------------------
+
+sudo su - eagle76 -s /bin/bash
+
+git clone https://github.com/ShaheenHossain/eagle11 --depth 1 --branch 11.0 --single-branch /opt/eagle76
+
+---------------------------------------
+cd /opt/eagle76
+virtualenv ./venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+---------------------------------------
 
 exit
 
+
+
+cd /
+
+---------------------------------------
 sudo nano /etc/eagle70.conf
 
 [options]
@@ -72,7 +133,7 @@ addons_path = /opt/eagle70/addons
 logfile = /var/log/eagle70.log
 xmlrpc_port = 8070
 
-
+---------------------------------------
 sudo nano /etc/eagle71.conf
 
 [options]
@@ -85,7 +146,7 @@ addons_path = /opt/eagle71/addons
 logfile = /var/log/eagle71.log
 xmlrpc_port = 8071
 
-
+---------------------------------------
 sudo nano /etc/eagle72.conf
 
 [options]
@@ -98,7 +159,7 @@ addons_path = /opt/eagle72/addons
 logfile = /var/log/eagle72.log
 xmlrpc_port = 8072
 
-
+---------------------------------------
 sudo nano /etc/eagle73.conf
 
 [options]
@@ -110,6 +171,48 @@ db_password = False
 addons_path = /opt/eagle73/addons
 logfile = /var/log/eagle73.log
 xmlrpc_port = 8073
+
+---------------------------------------
+sudo nano /etc/eagle74.conf
+
+[options]
+admin_passwd = ShaheeN1179
+db_host = False
+db_port = False
+db_user = eagle74
+db_password = False
+addons_path = /opt/eagle74/addons
+logfile = /var/log/eagle74.log
+xmlrpc_port = 8074
+
+---------------------------------------
+
+sudo nano /etc/eagle75.conf
+
+[options]
+admin_passwd = ShaheeN1179
+db_host = False
+db_port = False
+db_user = eagle75
+db_password = False
+addons_path = /opt/eagle75/addons
+logfile = /var/log/eagle75.log
+xmlrpc_port = 8075
+
+---------------------------------------
+sudo nano /etc/eagle76.conf
+
+[options]
+admin_passwd = ShaheeN1179
+db_host = False
+db_port = False
+db_user = eagle76
+db_password = False
+addons_path = /opt/eagle76/addons
+logfile = /var/log/eagle76.log
+xmlrpc_port = 8076
+
+---------------------------------------
 
 sudo nano /lib/systemd/system/eagle70.service
 
@@ -129,6 +232,8 @@ ExecStart=/opt/eagle70/venv/bin/python2 /opt/eagle70/odoo-bin -c /etc/eagle70.co
 [Install]
 WantedBy=multi-user.target
 
+---------------------------------------
+
 sudo nano /lib/systemd/system/eagle71.service
 
 [Unit]
@@ -147,6 +252,7 @@ ExecStart=/opt/eagle71/venv/bin/python2 /opt/eagle71/odoo-bin -c /etc/eagle71.co
 [Install]
 WantedBy=multi-user.target
 
+---------------------------------------
 
 sudo nano /lib/systemd/system/eagle72.service
 
@@ -166,6 +272,7 @@ ExecStart=/opt/eagle72/venv/bin/python2 /opt/eagle72/odoo-bin -c /etc/eagle72.co
 [Install]
 WantedBy=multi-user.target
 
+---------------------------------------
 
 sudo nano /lib/systemd/system/eagle73.service
 
@@ -185,12 +292,82 @@ ExecStart=/opt/eagle73/venv/bin/python2 /opt/eagle73/odoo-bin -c /etc/eagle73.co
 [Install]
 WantedBy=multi-user.target
 
+---------------------------------------
+
+sudo nano /lib/systemd/system/eagle74.service
+
+[Unit]
+Description=Eagle 74
+Requires=postgresql.service
+After=postgresql.service
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+User=eagle74
+Group=eagle74
+SyslogIdentifier=eagle74
+ExecStart=/opt/eagle74/venv/bin/python2 /opt/eagle74/odoo-bin -c /etc/eagle74.conf
+
+[Install]
+WantedBy=multi-user.target
+
+---------------------------------------
+
+sudo nano /lib/systemd/system/eagle75.service
+
+[Unit]
+Description=Eagle 75
+Requires=postgresql.service
+After=postgresql.service
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+User=eagle75
+Group=eagle75
+SyslogIdentifier=eagle75
+ExecStart=/opt/eagle75/venv/bin/python2 /opt/eagle75/odoo-bin -c /etc/eagle75.conf
+
+[Install]
+WantedBy=multi-user.target
+
+---------------------------------------
+
+sudo nano /lib/systemd/system/eagle76.service
+
+[Unit]
+Description=Eagle 75
+Requires=postgresql.service
+After=postgresql.service
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+User=eagle75
+Group=eagle75
+SyslogIdentifier=eagle75
+ExecStart=/opt/eagle75/venv/bin/python2 /opt/eagle75/odoo-bin -c /etc/eagle75.conf
+
+[Install]
+WantedBy=multi-user.target
+
+------------------------------------------------
+
 sudo systemctl enable eagle70.service
 sudo systemctl enable eagle71.service
 sudo systemctl enable eagle72.service
 sudo systemctl enable eagle73.service
+sudo systemctl enable eagle74.service
+sudo systemctl enable eagle75.service
+sudo systemctl enable eagle76.service
 
+------------------------------------------------
 sudo systemctl start eagle70.service
 sudo systemctl start eagle71.service
 sudo systemctl start eagle72.service
 sudo systemctl start eagle73.service
+sudo systemctl start eagle74.service
+sudo systemctl start eagle75.service
+sudo systemctl start eagle76.service
+
