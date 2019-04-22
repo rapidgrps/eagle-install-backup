@@ -71,8 +71,8 @@ sudo apt-get install wget git bzr python-pip gdebi-core -y
 
 echo -e "\n---- Install python packages ----"
 sudo apt-get install python-pypdf2 python-dateutil python-feedparser python-ldap python-libxslt1 python-lxml python-mako python-openid python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi python-docutils python-psutil python-mock python-unittest2 python-jinja2 python-pypdf python-decorator python-requests python-passlib python-pil -y
-sudo pip3 install pypdf2 Babel passlib Werkzeug decorator python-dateutil pyyaml psycopg2 psutil html2text docutils lxml pillow reportlab ninja2 requests gdata XlsxWriter vobject python-openid pyparsing pydot mock mako Jinja2 ebaysdk feedparser xlwt psycogreen suds-jurko pytz pyusb greenlet xlrd 
-sudo apt-get install python3-pandas
+sudo pip3 install 'Babel==2.3.4' 'decorator==4.0.10' 'docutils==0.12' 'ebaysdk==2.1.5' 'feedparser==5.2.1' 'gevent==1.1.2' 'greenlet==0.4.10' 'html2text==2016.9.19' 'libsass==0.12.3' 'lxml==3.7.1' 'lxml' 'Mako==1.0.4' 'MarkupSafe==0.23' 'mock==2.0.0' 'num2words==0.5.4' 'ofxparse==0.16' 'passlib==1.6.5' 'Pillow==4.0.0' 'psutil==4.3.1' 'psycopg2==2.7.3.1' 'pydot==1.2.3' 'pyldap==2.4.28' 'pyparsing==2.1.10' 'PyPDF2==1.26.0' 'pyserial==3.1.1' 'python-dateutil==2.5.3' 'pytz==2016.7' 'pyusb==1.0.0' 'qrcode==5.3' 'reportlab==3.3.0' 'suds-jurko==0.6' 'vatnumber==1.2' 'vobject==0.9.3' 'Werkzeug==0.11.15' 'XlsxWriter==0.9.3' 'xlwt==1.3.*' 'xlrd==1.0.0' 'pypiwin32'
+sudo apt-get install python3-pandas -y
 
 echo -e "\n---- Install python libraries ----"
 # This is for compatibility with Ubuntu 16.04. Will work on 14.04, 15.04 and 16.04
