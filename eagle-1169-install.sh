@@ -48,17 +48,25 @@ WKHTMLTOX_X32=https://downloads.wkhtmltopdf.org/0.12/0.12.1/wkhtmltox-0.12.1_lin
 # Update Server
 #--------------------------------------------------
 echo -e "\n---- Update Server ----"
-sudo apt-get update
-sudo apt-get upgrade -y
+
+sudo apt update && sudo apt upgrade -y
+
+
+# sudo apt-get update
+# sudo apt-get upgrade -y
 
 #--------------------------------------------------
 # Install PostgreSQL Server
 #--------------------------------------------------
 echo -e "\n---- Install PostgreSQL Server ----"
-sudo apt-get install postgresql -y
+
+sudo apt install postgresql -y
+
+# sudo apt-get install postgresql -y
 
 echo -e "\n---- Creating the Eagle PostgreSQL User  ----"
 sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
+
 
 #--------------------------------------------------
 # Install Dependencies
@@ -81,7 +89,7 @@ sudo apt-get install python3-suds
 echo -e "\n--- Install other required packages"
 sudo apt-get install node-clean-css -y
 sudo apt-get install node-less -y
-sudo apt-get install python-gevent -y
+sudo apt-get install gevent -y
 
 #--------------------------------------------------
 # Install Wkhtmltopdf if needed
