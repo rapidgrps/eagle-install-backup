@@ -60,13 +60,16 @@ sudo apt update && sudo apt upgrade -y
 #--------------------------------------------------
 echo -e "\n---- Install PostgreSQL Server ----"
 
-sudo apt install postgresql -y
+sudo apt install postgresql postgresql-contrib -y
+sudo -u postgres psql -c 10.6
 
+
+# sudo apt install postgresql -y
 # sudo apt-get install postgresql -y
+
 
 echo -e "\n---- Creating the Eagle PostgreSQL User  ----"
 sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
-
 
 #--------------------------------------------------
 # Install Dependencies
