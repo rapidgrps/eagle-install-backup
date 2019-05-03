@@ -9,11 +9,11 @@ This script can be safely used in a multi-odoo code base server because the defa
 
 1. Download the script: 8065
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/1165/eagle-1165-install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/1162/eagle-1162-install.sh
 
 2. Make the script executable:
-sudo chmod +x eagle-1165-install.sh
+sudo chmod +x eagle-1162-install.sh
 
 3. Execute the script:
-sudo ./eagle-1165-install.sh
+sudo ./eagle-1162-install.sh
 ```
