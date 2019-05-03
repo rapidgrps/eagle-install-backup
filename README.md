@@ -7,13 +7,13 @@ This script can be safely used in a multi-odoo code base server because the defa
 
 <h3>Installation procedure 11</h3>
 
-1. Download the script: 8065
+1. Download the script: 8061
 
-sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/1162/eagle-1162-install.sh
+sudo wget https://raw.githubusercontent.com/ShaheenHossain/eagle-install-backup/1161/eagle-1161-install.sh
 
 2. Make the script executable:
-sudo chmod +x eagle-1162-install.sh
+sudo chmod +x eagle-1161-install.sh
 
 3. Execute the script:
-sudo ./eagle-1162-install.sh
+sudo ./eagle-1161-install.sh
 ```
