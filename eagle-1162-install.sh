@@ -72,7 +72,7 @@ sudo ln -s /usr/local/bin/wkhtml* /usr/bin
 
 # install python requirements file (Odoo)
 
-sudo pip3 install -r $OE_HOME/$OE_USER/requirements.txt
+sudo pip3 install -r $OE_HOME/${OE_USER}-server/requirements.txt
 sudo apt-get -f -y install
 
 #3
