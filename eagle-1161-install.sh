@@ -36,11 +36,35 @@ sudo su - postgres -c "createuser -s $OE_USER" 2> /dev/null || true
 #--------------------------------------------------
 # Install Dependencies
 #--------------------------------------------------
-echo -e "\n--- Installing Python 3 + pip3 --"
-sudo apt-get install python3 python3-pip
+#echo -e "\n--- Installing Python 3 + pip3 --"
+#sudo apt-get install python3 python3-pip
 
-echo -e "\n---- Install tool packages ----"
-sudo apt-get install wget git bzr python-pip gdebi-core -y
+sudo apt-get -y install gcc python3-dev libxml2-dev libxslt1-dev \
+ libevent-dev libsasl2-dev libldap2-dev libpq-dev \
+ libpng-dev libjpeg-dev
+
+sudo apt-get -y install python3 python3-pip python-pip
+sudo pip3 install libsass vobject qrcode num2words setuptools
+sudo apt-get install python3-pandas -y
+
+# FIX wkhtml* dependencie Ubuntu Server 18.04
+sudo apt-get -y install libxrender1
+
+
+# Install nodejs and less
+
+sudo apt-get install -y npm node-less
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+sudo npm install -g less
+
+
+#echo -e "\n---- Install tool packages ----"
+#sudo apt-get install wget git bzr python-pip gdebi-core -y
+
+echo -e "\n---- Install Eagle ERP requirement packages ----"
+sudo pip3 install -r $OE_HOME/${OE_USER}-server/requirements.txt
+sudo apt-get -f -y install
+
 
 #echo -e "\n---- Install python packages ----"
 #sudo apt-get install python-pypdf2 python-dateutil python-feedparser python-ldap python-libxslt1 python-lxml python-mako python-openid python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi python-docutils python-psutil python-mock python-unittest2 python-jinja2 python-pypdf python-decorator python-requests python-passlib python-pil -y
@@ -50,10 +74,10 @@ echo -e "\n---- Install python libraries ----"
 # This is for compatibility with Ubuntu 16.04. Will work on 14.04, 15.04 and 16.04
 sudo apt-get install python3-suds
 
-echo -e "\n--- Install other required packages"
-sudo apt-get install node-clean-css -y
-sudo apt-get install node-less -y
-sudo apt-get install python-gevent -y
+#echo -e "\n--- Install other required packages"
+#sudo apt-get install node-clean-css -y
+#sudo apt-get install node-less -y
+#sudo apt-get install python-gevent -y
 
 
 
@@ -78,8 +102,6 @@ fi
 
 echo -e "\n---- Install python packages ----"
 
-sudo pip3 install -r $OE_HOME/${OE_USER}-server/requirements.txt
-sudo apt-get -f -y install
 
 echo -e "\n---- Create Eagle ERP system user ----"
 sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'EAGLE1161' --group $OE_USER
