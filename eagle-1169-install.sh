@@ -29,7 +29,8 @@ sudo apt-get install -y git
 # Install PostgreSQL for Eagle ERP Server
 #--------------------------------------------------
 
-sudo apt-get install postgresql -y
+#sudo apt-get install postgresql -y
+sudo apt-get install postgresql libpq-dev -y
 
 
 echo -e "\n---- Creating the EAGLE ERP PostgreSQL User  ----"
