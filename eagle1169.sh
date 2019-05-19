@@ -1,11 +1,13 @@
 OE_USER="eagle1169"
 DIR_PATH=$(pwd)
 OE_VERSION=11.0
+OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
 PORT=8069
 OE_HOME="/$OE_USER"
 PATH_LOG=/$OE_USER/log
 CUSTOM=/$OE_USER/custom
 CUSTOM_ADDONS=/$OE_USER/custom/addons
+#OE_CONFIG="${OE_USER}-server"
 
 wk64="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.$(lsb_release -cs)_amd64.deb"
 wk32="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.$(lsb_release -cs)_i386.deb"
@@ -24,7 +26,8 @@ sudo mkdir $PATH_LOG
 sudo mkdir $CUSTOM
 sudo mkdir $CUSTOM_ADDONS
 cd $OE_HOME
-sudo git clone https://github.com/ShaheenHossain/eagle11 -b $OE_VERSION --depth 1 $OE_HOME/$OE_VERSION/$OE_USER
+
+sudo git clone --depth 1 --branch $OE_VERSION https://github.com/ShaheenHossain/eagle11 $OE_HOME_EXT/
 
 sudo apt-get -y install gcc python3-dev libxml2-dev libxslt1-dev \
  libevent-dev libsasl2-dev libldap2-dev libpq-dev \
