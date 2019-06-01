@@ -1,9 +1,9 @@
 
-OE_USER="eagle1161"
+OE_USER="eagle1162"
 OE_HOME="/$OE_USER"
 OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
 INSTALL_WKHTMLTOPDF="True"
-OE_PORT="8061"
+OE_PORT="8062"
 OE_VERSION="11.0"
 IS_ENTERPRISE="False"
 OE_SUPERADMIN="admin"
@@ -85,7 +85,7 @@ echo -e "\n---- Install python packages ----"
 
 
 echo -e "\n---- Create Eagle ERP system user ----"
-sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'EAGLE1161' --group $OE_USER
+sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'EAGLE1162' --group $OE_USER
 #The user should also be added to the sudo'ers group.
 sudo adduser $OE_USER sudo
 
